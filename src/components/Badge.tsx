@@ -93,7 +93,9 @@ const Badge = ({
     ...restStyle
   } = (StyleSheet.flatten(style) || {}) as TextStyle;
 
-  const textColor = getContrastingColor(backgroundColor || white, white, black);
+  const textColor = isV3
+    ? (md('md.sys.color.on-error') as string)
+    : getContrastingColor(backgroundColor || white, white, black);
 
   const borderRadius = size / 2;
 
