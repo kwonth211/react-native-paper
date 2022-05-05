@@ -185,6 +185,9 @@ const ListAccordion = ({
     groupContext && id !== undefined
       ? () => groupContext.onAccordionPress(id)
       : handlePressAction;
+
+  console.log({ handlePress });
+  console.log({ groupContext });
   return (
     <View>
       <View style={{ backgroundColor: theme.colors.background }}>
